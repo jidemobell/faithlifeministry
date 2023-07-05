@@ -1,0 +1,196 @@
+.s-footer {
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+  background-color: #3b0d11;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.882;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.s-footer a {
+  color: #ffffff;
+}
+
+.s-footer h4 {
+  margin-top: 1.6rem;
+  margin-bottom: 2.4rem;
+  color: #ffffff;
+}
+
+.s-footer .btn--footer {
+  border-color: #21070a;
+  background-color: #21070a;
+  padding: 0 4rem;
+}
+
+.s-footer .btn--footer:hover,
+.s-footer .btn--footer:focus {
+  border-color: #000000;
+  background-color: #000000;
+}
+
+.s-footer .row .column:first-child {
+  margin-right: auto;
+}
+
+/* -------------------------------------------------------------------
+ * ## footer logo 
+ * ------------------------------------------------------------------- */
+.footer-logo {
+  margin-bottom: 2.8rem;
+}
+
+.footer-logo a {
+  display: block;
+}
+
+.footer-logo img {
+  width: 138px;
+  height: 36px;
+}
+
+/* -------------------------------------------------------------------
+ * ## footer list 
+ * ------------------------------------------------------------------- */
+.footer-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-list a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-list a:hover,
+.footer-list a:focus {
+  color: #ffffff;
+}
+
+.footer-list li {
+  padding-left: 0;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## copyright 
+ * ------------------------------------------------------------------- */
+.ss-copyright {
+  margin-top: 4.8rem;
+  padding-right: 80px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.ss-copyright span {
+  font-size: 15px;
+  display: inline-block;
+}
+
+.ss-copyright span::after {
+  content: "|";
+  display: inline-block;
+  padding: 0 1rem 0 1.2rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.ss-copyright span:last-child::after {
+  display: none;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## go to top 
+ * ------------------------------------------------------------------- */
+.ss-go-top {
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0);
+  transition: all .8s;
+  position: fixed;
+  bottom: 4rem;
+  right: 4.8rem;
+}
+
+.ss-go-top a {
+  display: block;
+  background-color: #000000;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 60px;
+  width: 58px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  transition: all .3s;
+  position: relative;
+}
+
+.ss-go-top svg {
+  height: 12px;
+  width: 12px;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ss-go-top svg path {
+  fill: #ffffff;
+}
+
+.ss-go-top a:hover {
+  background-color: #037c82;
+  color: #ffffff;
+}
+
+.ss-go-top.link-is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * footer
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:1400px) {
+  .ss-go-top {
+    bottom: 3.6rem;
+    right: 3.2rem;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .ss-copyright span {
+    display: block;
+  }
+
+  .ss-copyright span::after {
+    display: none;
+  }
+
+  .ss-go-top {
+    bottom: 0;
+    right: 0;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .btn--footer {
+    display: block;
+    margin-right: 0;
+  }
+
+  .footer-logo img {
+    width: 116px;
+    height: 30px;
+  }
+
+}
