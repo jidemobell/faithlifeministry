@@ -174,7 +174,7 @@ export default function Home() {
               <div className="column events-list__item">
                 <h3 className="display-1 events-list__item-title">
                   <a href="#0" title="">
-                    2019 Kids Church Camp.
+                    2023 Revival Hour.
                   </a>
                 </h3>
                 <p>
@@ -190,7 +190,7 @@ export default function Home() {
                   </li>
                   <li className="events-list__meta-time">8:00AM - 5:30PM</li>
                   <li className="events-list__meta-location">
-                    1600 Amphitheatre Parkway, Mt. View
+                    1600 Amphitheatre Parkway
                   </li>
                 </ul>
               </div>
@@ -214,7 +214,7 @@ export default function Home() {
                   </li>
                   <li className="events-list__meta-time">6:00PM - 8:30PM</li>
                   <li className="events-list__meta-location">
-                    1600 Amphitheatre Parkway, Mt. View
+                    1600 Amphitheatre Parkway
                   </li>
                 </ul>
               </div>
@@ -238,7 +238,7 @@ export default function Home() {
                   </li>
                   <li className="events-list__meta-time">5:00PM - 6:30PM</li>
                   <li className="events-list__meta-location">
-                    1600 Amphitheatre Parkway, Mt. View
+                    1600 Amphitheatre Parkway
                   </li>
                 </ul>
               </div>
