@@ -135,7 +135,7 @@ export default function Home() {
                   href="volunteer.html"
                   className="btn btn--primary h-full-width"
                 >
-                  I'm Interested
+                  I{`&apos;`}m Interested
                 </a>
               </div>
               <div className="column large-half tab-full">

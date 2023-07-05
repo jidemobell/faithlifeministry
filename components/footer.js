@@ -1,6 +1,4 @@
-
-// import styles from "./footer.module.css"
-// ${styles[`${color}`]}
+import Image from 'next/image';
 
 
 export default function Footer() {
@@ -10,7 +8,7 @@ export default function Footer() {
       <div className="column large-4 medium-5 tab-full">
         <div className="footer-logo">
           <a className="site-footer-logo" href="index.html">
-            <img src="images/faithlife2.svg" alt="Homepage" />
+            <Image src="images/faithlife2.svg" alt="Homepage" />
           </a>
         </div>
         {/* <!-- footer-logo --> */}

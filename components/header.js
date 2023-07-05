@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 export default function Header() {
   return (
     <header className="s-header"  style={{ backgroundColor: "black"}}>
       <div className="header-logo">
         <a className="site-logo" href="index.html">
-          <img src="images/herologo1.svg" alt="Homepage" />
+          <Image src="images/herologo1.svg" alt="Homepage" />
         </a>
       </div>
 
