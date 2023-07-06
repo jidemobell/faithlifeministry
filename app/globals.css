@@ -3449,6 +3449,23 @@ input::-moz-focus-inner {
   /* border: 3px solid green; */
 }
 
+.hero-slider {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -50;
+  /* border: 3px solid grey; */
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .8;
+}
+
+
+
 /* -------------------------------------------------------------------
  * ## hero left bar
  * ------------------------------------------------------------------- */
@@ -3504,6 +3521,8 @@ input::-moz-focus-inner {
   top: 0;
   left: .8rem;
 }
+
+
 
 /* -------------------------------------------------------------------
  * ## hero content buttons

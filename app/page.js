@@ -1,8 +1,9 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import Image from "next/legacy/image";
 
 import 'animate.css';
 
@@ -13,49 +14,74 @@ const images = [
   "/images/hero/hero2.jpg",
   "/images/hero/hero3.jpg",
   "/images/hero/hero4.jpg",
-  "/images/hero/hero5.jpg"
+  "/images/hero/hero5.jpg",
 ];
 
-
 export default function Home() {
-  const [ value , setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0);
 
   React.useEffect(() => {
     const switchImage = () => {
-      setValue( v => v === 3 ? 0 : v + 1) 
-    }
-    const interval = setInterval( switchImage , 7000)
+      setValue((v) => (v === 3 ? 0 : v + 1));
+    };
+    const interval = setInterval(switchImage, 10000);
     return () => clearInterval(interval);
-  }, [value, 4])
+  }, []);
 
   return (
     <main>
       <div>
         <Header />
         <div id="top">
-        {/* <div> */}
+          {/* <div> */}
           {/* <!-- hero ================================================== --> */}
           <section
             // style={{ border: `3px solid red`}}
-            className="s-hero bg-blend-multiply	bg-gradient-to-t animate__fadeInRight" 
+            className="s-hero bg-blend-multiply	bg-gradient-to-t animate__fadeInDown"
             data-parallax="scroll"
             data-image-src="images/hero-bg-3000.jpg"
             data-natural-width="3000"
             data-natural-height="2000"
             data-position-y="center"
             // style={{ backgroundImage: `url(images/hero/high.jpg)`  , backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}
-            
-            style={{ backgroundImage: `url(${images[value]})`  , backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}
 
-            >
+            // style={{
+            //   backgroundImage: `url(${images[value]})`,
+            //   backgroundPosition: `center`,
+            //   backgroundRepeat: `no-repeat`,
+            //   backgroundSize: `cover`
+            // }}
+          >
+            {/* <Image
+             src={`${images[value]}`}
+             className="hero-slider animate__fadeInRight animate__fadeInLeft"
+            alt="logo"
+            width={3000}
+            height={2000}
+            placeholder="blur"
+            blurDataURL={`${images[value]}`}
+          /> */}
+            <div className="hero-slider" style={{ height: "100%", width: "100%"}}>
+              <Image
+             src={`${images[value]}`}
+             className="animate__fadeInRight animate__fadeInLeft"
+            alt="logo"
+            // width={3000}
+            // height={2000}
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={`${images[value]}`}
+          />
+            </div>
             <div className="hero-left-bar"></div>
-            <div className="row hero-content" >
+            <div className="row hero-content">
               <div className="column large-full hero-content__text">
                 <h1>
                   {/* We Exist To <br />
                   Honor God And <br />
                   Make Disciples */}
-                  We Nuture Ourselves <br /> To The Transformative <br /> Power Of the Holy Spirit.
+                  We Nuture Ourselves <br /> To The Transformative <br /> Power
+                  Of the Holy Spirit.
                 </h1>
                 <div className="hero-content__buttons">
                   <a href="events.html" className="btn btn--stroke">
@@ -118,7 +144,7 @@ export default function Home() {
                   <li>
                     <h4>Wednesday Power Meeting</h4>
                     <p>
-                      Wednesday - 3:00 PM |  <br />
+                      Wednesday - 3:00 PM | <br />
                       ZOOM CONNECT
                     </p>
                   </li>
