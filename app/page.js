@@ -1,7 +1,30 @@
+'use client'
+
+import React from 'react'
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
+
+const images = [
+  // "https://via.placeholder.com/150/000000",
+  // "/images/hero/high.jpg",
+  "/images/hero/hero2.jpg",
+  "/images/hero/hero3.jpg",
+  "/images/hero/hero4.jpg",
+  "/images/hero/hero5.jpg",
+];
+
+
 export default function Home() {
+  const [ value , setValue] = React.useState(0);
+
+  React.useEffect(() => {
+    const switchImage = () => {
+      setValue( v => v === 4 ? 0 : v + 1) 
+    }
+    const interval = setInterval( switchImage , 5000)
+  }, [])
+
   return (
     <main>
       <div>
@@ -17,8 +40,7 @@ export default function Home() {
             data-natural-width="3000"
             data-natural-height="2000"
             data-position-y="center"
-            // style={{ backgroundImage: `url('images/high.jpg')`, backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}
-            style={{ backgroundImage: `url('images/high.jpg')`, backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}
+            style={{ backgroundImage: `url(${images[value]})`  , backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}
           >
             <div className="hero-left-bar"></div>
             <div className="row hero-content" >
