@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./animate.css";
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -3462,7 +3464,25 @@ input::-moz-focus-inner {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .8;
+  /* transition: all 700ms ease-in-out 7ms; */
+  /* transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000); */
 }
+
+.slider-image {
+  animation: fader ease-in-out 3s;
+}
+
+@keyframes fader {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  }
+  100% {
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  }
+}
+
 
 
 

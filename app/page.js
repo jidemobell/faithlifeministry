@@ -1,12 +1,11 @@
 "use client";
 
 import React from "react";
+import $ from 'jquery';
+// import ReactCSSTransitionGroup from "react-transition-group";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Image from "next/legacy/image";
-
-import 'animate.css';
-
 
 const images = [
   // "https://via.placeholder.com/150/000000",
@@ -17,22 +16,90 @@ const images = [
   "/images/hero/hero5.jpg",
 ];
 
+
+
 export default function Home() {
   const [value, setValue] = React.useState(0);
+  const [callSlide, setCallSlide] = React.useState(null)
+
+  const slideImages = [
+    <Image
+      src="/images/hero/hero2.jpg"
+      className="slider-image"
+      alt="logo"
+      layout="fill"
+      placeholder="blur"
+      blurDataURL="/images/hero/hero2.jpg"
+    />,
+    <Image
+      src="/images/hero/hero3.jpg"
+      alt="logo"
+      className="slider-image"
+      layout="fill"
+      placeholder="blur"
+      blurDataURL="/images/hero/hero3.jpg"
+    />,
+    <Image
+      src="/images/hero/hero4.jpg"
+      alt="logo"
+      className="slider-image"
+      layout="fill"
+      placeholder="blur"
+      blurDataURL="/images/hero/hero4.jpg"
+    />,
+    <Image
+      src="/images/hero/hero5.jpg"
+      alt="logo"
+      className="slider-image"
+      layout="fill"
+      placeholder="blur"
+      blurDataURL="/images/hero/hero5.jpg"
+    />,
+  ];
+  
+
+  React.useEffect(() => {
+    const jQueryCode = () => {
+      $(".slider-image").css("-webkit-animation", "none");
+      $(".slider-image").css("-moz-animation", "none");
+      $(".slider-image").css("-ms-animation", "none");
+      $(".slider-image").css("animation", "none");
+    }
+    
+    const interval = setInterval(jQueryCode , 9000);
+    return () => clearInterval(interval);
+  }, []);
+
+
+  React.useEffect(() => {
+    const jQueryCode = () => {
+      $(".slider-image").css("-webkit-animation", "fader ease-in-out 3s");
+      $(".slider-image").css("-moz-animation", "fader ease-in-out 3s");
+      $(".slider-image").css("-ms-animation", "fader ease-in-out 3s");
+      $(".slider-image").css("animation", "fader ease-in-out 3s");
+    }
+    
+    const interval = setInterval(jQueryCode , 10000);
+    return () => clearInterval(interval);
+  }, []);
+
+
 
   React.useEffect(() => {
     const switchImage = () => {
       setValue((v) => (v === 3 ? 0 : v + 1));
     };
-    const interval = setInterval(switchImage, 10000);
+    
+    const interval = setInterval(switchImage , 10000);
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <main>
       <div>
         <Header />
-        <div id="top">
+        <div id="top animate__fadeInDown">
           {/* <div> */}
           {/* <!-- hero ================================================== --> */}
           <section
@@ -61,22 +128,26 @@ export default function Home() {
             placeholder="blur"
             blurDataURL={`${images[value]}`}
           /> */}
-            <div className="hero-slider" style={{ height: "100%", width: "100%"}}>
-              <Image
-             src={`${images[value]}`}
-             className="animate__fadeInRight animate__fadeInLeft"
-            alt="logo"
-            // width={3000}
-            // height={2000}
-            layout="fill"
-            placeholder="blur"
-            blurDataURL={`${images[value]}`}
-          />
+            <div
+              className="hero-slider"
+              style={{ height: "100%", width: "100%" }}
+            >
+              {/* <Image
+                src={`${images[value]}`}
+                // className="slider-image"
+                alt="logo"
+                layout="fill"
+                placeholder="blur"
+                blurDataURL={`${images[value]}`}
+              /> */}
+              {
+                slideImages[value]  
+              }
             </div>
             <div className="hero-left-bar"></div>
             <div className="row hero-content">
               <div className="column large-full hero-content__text">
-                <h1>
+                <h1 className="animate__bounceInDown">
                   {/* We Exist To <br />
                   Honor God And <br />
                   Make Disciples */}

@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-// import Head from "next/head";
+import Head from "next/head";
 // import "animate.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,12 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <Head>
+      <Head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
-      </Head> */}
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
