@@ -5,7 +5,7 @@ export default function Header() {
     <header className="s-header" style={{ backgroundColor: "black" }}>
       <div className="header-logo">
         <div className="flex flex-row">
-          <a
+          {/* <a
             className="site-logo"
             href="index.html"
             style={{ width: "40px", height: "25px", marginLeft: "4px", marginRight: "10px" }}
@@ -18,7 +18,7 @@ export default function Header() {
               placeholder="blur"
               blurDataURL={"/images/brand.png"}
             />
-          </a>
+          </a> */}
           <a className="site-logo flex flex-col" href="index.html">
             <Image
               src="images/herologo1.svg"
