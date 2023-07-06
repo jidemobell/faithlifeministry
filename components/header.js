@@ -1,11 +1,18 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="s-header"  style={{ backgroundColor: "black"}}>
+    <header className="s-header" style={{ backgroundColor: "black" }}>
       <div className="header-logo">
         <a className="site-logo" href="index.html">
-          <Image src="images/herologo1.svg" alt="Homepage" width={108} height={28} />
+          <Image
+            src="images/herologo1.svg"
+            alt="logo"
+            width={108}
+            height={28}
+            placeholder="blur"
+            blurDataURL={"images/herologo1.svg"}
+          />
         </a>
       </div>
 

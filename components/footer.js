@@ -10,9 +10,11 @@ export default function Footer() {
             <a className="site-footer-logo" href="index.html">
               <Image
                 src="images/faithlife2.svg"
-                alt="Homepage"
+                alt="events"
                 width={138}
                 height={36}
+                placeholder="blur"
+                blurDataURL={"images/faithlife2.svg"}
               />
             </a>
           </div>

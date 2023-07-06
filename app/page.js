@@ -4,6 +4,8 @@ import React from 'react'
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
+import 'animate.css';
+
 
 const images = [
   // "https://via.placeholder.com/150/000000",
@@ -11,7 +13,7 @@ const images = [
   "/images/hero/hero2.jpg",
   "/images/hero/hero3.jpg",
   "/images/hero/hero4.jpg",
-  "/images/hero/hero5.jpg",
+  "/images/hero/hero5.jpg"
 ];
 
 
@@ -20,10 +22,11 @@ export default function Home() {
 
   React.useEffect(() => {
     const switchImage = () => {
-      setValue( v => v === 4 ? 0 : v + 1) 
+      setValue( v => v === 3 ? 0 : v + 1) 
     }
-    const interval = setInterval( switchImage , 5000)
-  }, [])
+    const interval = setInterval( switchImage , 7000)
+    return () => clearInterval(interval);
+  }, [value, 4])
 
   return (
     <main>
@@ -34,14 +37,17 @@ export default function Home() {
           {/* <!-- hero ================================================== --> */}
           <section
             // style={{ border: `3px solid red`}}
-            className="s-hero bg-blend-multiply	bg-gradient-to-t"
+            className="s-hero bg-blend-multiply	bg-gradient-to-t animate__fadeInRight" 
             data-parallax="scroll"
             data-image-src="images/hero-bg-3000.jpg"
             data-natural-width="3000"
             data-natural-height="2000"
             data-position-y="center"
+            // style={{ backgroundImage: `url(images/hero/high.jpg)`  , backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}
+            
             style={{ backgroundImage: `url(${images[value]})`  , backgroundPosition: `center`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`}}
-          >
+
+            >
             <div className="hero-left-bar"></div>
             <div className="row hero-content" >
               <div className="column large-full hero-content__text">
