@@ -28,12 +28,14 @@ export default function Home() {
       className="slider-image"
       alt="logo"
       layout="fill"
+      key={`key_${"/images/hero/hero2.jpg"}`}
       placeholder="blur"
       blurDataURL="/images/hero/hero2.jpg"
     />,
     <Image
       src="/images/hero/hero3.jpg"
       alt="logo"
+      key={`key_${"/images/hero/hero3.jpg"}`}
       className="slider-image"
       layout="fill"
       placeholder="blur"
@@ -42,6 +44,7 @@ export default function Home() {
     <Image
       src="/images/hero/hero4.jpg"
       alt="logo"
+      key={`key_${"/images/hero/hero4.jpg"}`}
       className="slider-image"
       layout="fill"
       placeholder="blur"
@@ -50,6 +53,7 @@ export default function Home() {
     <Image
       src="/images/hero/hero5.jpg"
       alt="logo"
+      key={`key_${"/images/hero/hero5.jpg"}`}
       className="slider-image"
       layout="fill"
       placeholder="blur"
