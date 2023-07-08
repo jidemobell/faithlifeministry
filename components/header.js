@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import './header.css'
+
 export default function Header() {
   return (
     <header className="s-header" style={{ backgroundColor: "black" }}>
